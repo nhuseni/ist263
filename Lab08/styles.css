@@ -1,0 +1,76 @@
+/* ===== LAB 08 ADDITIONS (append below) ===== */
+
+/* Float demo (practice.html steps 4–6) */
+.float-left {
+  float: left;
+  margin: 0 12px 10px 0;   /* space so text isn't squished */
+  max-width: 260px;
+  height: auto;
+  border-radius: 6px;
+}
+.clear { clear: both; }
+
+/* Footer: copyright left, quote right (step 7) */
+.site-footer .copyright { float: left; margin: 0; }
+.site-footer .tagline   { float: right; margin: 0; font-style: italic; }
+
+/* Flexbox demo (practice.html steps 9–13) */
+.part2 {
+  display: flex;          /* make children line up horizontally */
+  gap: 12px;              /* step 12: space between boxes */
+  margin-top: 20px;
+}
+.part2 article {
+  background: #f5f5f5;
+  padding: 12px;
+  border-radius: 10px;    /* step 13: rounded corners */
+}
+.article1 { flex: 2; order: 3; background: #f0f7d8; }  /* step 10 + 11 */
+.article2 { flex: 1; order: 2; }
+.article3 { flex: 1; order: 1; }
+
+/* Contact page (rows & columns – lab 19a–19h) */
+.row {
+  display: flex;          /* side-by-side columns */
+  gap: 16px;              /* space between columns */
+  margin: 16px 0;         /* space between top & bottom containers */
+}
+.row .col {
+  flex: 1 1 0;
+  background: #f5f5f5;    /* background color on both boxes */
+  border-radius: 10px;    /* rounded corners */
+  padding: 14px;          /* inside spacing */
+  min-width: 0;
+}
+
+/* Form polish */
+.contact-form { display: grid; gap: 10px; }
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font: inherit;
+}
+.contact-form button {
+  background: #F3AD1A;
+  color: #111111;
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Map fills its box */
+.map-embed { width: 100%; height: 100%; min-height: 320px; border-radius: 6px; overflow: hidden; background: #fff; }
+.map-embed iframe { width: 100%; height: 100%; border: 0; }
+
+/* Mobile: stack columns; un-float footer text */
+@media (max-width: 700px) {
+  .row { flex-direction: column; }
+  .site-footer .copyright,
+  .site-footer .tagline { float: none; text-align: center; }
+}

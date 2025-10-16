@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Floats & Flexbox Practice — IST 263 Lab 08</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Optional: use your shared CSS for nav/fonts -->
+  <link href="style.css" rel="stylesheet">
+
+  <!-- Embedded stylesheet (required by the lab for the practice page steps) -->
+  <style>
+    :root { --ink:#111; --bg:#f6f7e6; --accent:#9dad3d; --muted:#e9edd0; }
+    *{ box-sizing:border-box; }
+    body{ margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 system-ui,Arial,sans-serif; }
+    .page{ max-width:1000px; margin:0 auto; padding:1rem; }
+
+    /* simple nav so you can navigate the lab pages */
+    nav ul{ display:flex; gap:.6rem; list-style:none; padding:0; margin:0 0 1rem; }
+    nav a{ text-decoration:none; background:var(--muted); padding:.45rem .7rem; border-radius:.5rem; color:#000; }
+    nav a[aria-current="page"]{ background:var(--accent); color:#fff; }
+    h1,h2,h3{ margin:.3rem 0 .6rem; }
+
+    /* ---------- FLOATS (Steps 4–8) ---------- */
+    .part1 article{ background:#fff; padding:1rem; border-radius:.75rem; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+    .float-left{              /* step 4: float the image left */
+      float:left;
+      margin:0 .75rem .5rem 0;/* step 6: margin so text isn't squished */
+      max-width:260px; height:auto; display:block; border-radius:.5rem;
+    }
+    .clear{ clear:both; }     /* step 5: end the float */
+
+    footer{ margin-top:1rem; background:#fff; padding:1rem; border-radius:.75rem; }
+    footer hr{ border:none; border-top:1px solid #ddd; margin:0 0 .75rem; }
+    footer .copyright{ float:left; margin:0; }
+    footer .tagline{ float:right; margin:0; font-style:italic; }
+
+    /* ---------- FLEXBOX (Steps 9–13) ---------- */
+    .part2{ margin-top:2rem; background:#fff; padding:1rem; border-radius:.75rem; }
+    .part2{ display:flex; gap:1rem; } /* step 9 */
+    .part2 article{ background:var(--muted); padding:.9rem; border-radius:.5rem; }
+    .article1{ flex:2; order:3; background:#d6df9a; border-radius:12px; } /* steps 10 + 13 */
+    .article2{ flex:1; order:2; }
+    .article3{ flex:1; order:1; }
+    /* step 12: spacing handled by gap */
+
+    @media (max-width:700px){
+      .part2{ flex-direction:column; }
+      footer .copyright, footer .tagline{ float:none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- NAV -->
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Bio</a></li>
+        <li><a href="practice.html" aria-current="page">Practice</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <h1>Floats and Flexbox Practice</h1>
+
+    <!-- ================= The Floats Part ================= -->
+    <section class="part1">
+      <h2>The Floats Part</h2>
+
+      <!-- FRUIT article (with floated image + clear) -->
+      <article>
+        <!-- Hosted image so you don’t need local files -->
+        <img class="float-left"
+             src="https://cdn.cnn.com/cnnnext/dam/assets/210712160202-ransomware-cyberattack---stock-medium-plus-169.jpg"
+             alt="Decorative image for float demo">
+        <h3>fruit</h3>
+        <p>Epic cheeseburgers come in all kinds of manifestations, but we want them in and around our mouth no matter what. Slide those smashed patties with the gently caramelized meat fat between a toasted brioche bun and pass it over. You fall in love with the cheeseburger itself but the journey ain’t half bad either. They’re the childhood friend that knows your highest highs and lowest lows. They’ve been with you through thick and thin and they’re the best at keeping secrets. Whether it’s dressed up or informal, cheeseburgers have your back.</p>
+        <p>Pop quiz: what’s the greatest thing to happen to your mind, body, and soul in recent history? A cheeseburger, obviously. Cheeseburgers know that what you want can also be what you need. Sometimes we lose sight of what really matters in life. There’s something to be said for a gourmet brie and truffle burger paired with parmesan frites, but don’t let that make you forget about the ol’ faithful with American cheddar and a squishy bun. Lettuce remind you that cheeseburgers come in all forms - bun intended.</p>
+        <div class="clear"></div> <!-- step 5 -->
+      </article>
+
+      <!-- FISH -->
+      <article>
+        <h3>fish</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </article>
+
+      <!-- BURGER -->
+      <article>
+        <h3>burger</h3>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+      </article>
+
+      <footer>
+        <hr>
+        <p class="copyright">&copy; <time datetime="2025">2025</time> Nabil Huseni</p>
+        <p class="tagline">“A fit, healthy body – that is the best fashion statement.” – Jess C. Scott</p>
+        <div class="clear"></div>
+      </footer>
+    </section>
+
+    <!-- ================= The Flexbox Part ================= -->
+    <section class="part2" aria-label="The Flexbox Part">
+      <article class="article3">
+        <h3>fruit</h3>
+        <p>Epic cheeseburgers come in all kinds of manifestations, but we want them in and around our mouth no matter what. Slide those smashed patties with the gently caramelized meat fat between a toasted brioche bun and pass it over. You fall in love with the cheeseburger itself but the journey ain’t half bad either. They’re the childhood friend that knows your highest highs and lowest lows. They’ve been with you through thick and thin and they’re the best at keeping secrets. Whether it’s dressed up or informal, cheeseburgers have your back.</p>
+        <p>Pop quiz: what’s the greatest thing to happen to your mind, body, and soul in recent history? A cheeseburger, obviously. Cheeseburgers know that what you want can also be what you need. Sometimes we lose sight of what really matters in life. There’s something to be said for a gourmet brie and truffle burger paired with parmesan frites, but don’t let that make you forget about the ol’ faithful with American cheddar and a squishy bun. Lettuce remind you that cheeseburgers come in all forms - bun intended.</p>
+      </article>
+
+      <article class="article2">
+        <h3>fish</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </article>
+
+      <article class="article1">
+        <h3>burger</h3>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+      </article>
+    </section>
+  </div>
+</body>
+</html>
