@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nabil Huseni - Skills</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Keep your existing simple nav -->
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="skills.html" aria-current="page">Skills</a> |
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main class="page">
+    <!-- ===== Flexbox 2 (outer two-column layout) ===== -->
+    <div class="skills-layout">
+      <!-- LEFT COLUMN (3/4): title + intro + icon row -->
+      <section class="skills-main">
+        <!-- 1–3: heading centered + intro (inside left column = extra credit) -->
+        <h1 class="skills-title">Technical Skills</h1>
+        <p class="skills-intro">
+          I focus on web development and analytics. I keep adding new frameworks as the web evolves.
+          Below are my core skills, followed by other tools I regularly use.
+        </p>
+
+        <!-- ===== Flexbox 1 (inner row with five icons) ===== -->
+        <div class="skills-row">
+          <!-- Replace the src paths with your real icons (SVG or PNG). Keep filenames if possible. -->
+          <div class="skill">
+            <img src="img/icons/html.svg" alt="HTML icon"><br>
+            <span>HTML</span>
+          </div>
+
+          <div class="skill">
+            <img src="img/icons/css.svg" alt="CSS icon"><br>
+            <span>CSS</span>
+          </div>
+
+          <div class="skill">
+            <img src="img/icons/js.svg" alt="JavaScript icon"><br>
+            <span>JavaScript</span>
+          </div>
+
+          <div class="skill">
+            <img src="img/icons/python.svg" alt="Python icon"><br>
+            <span>Python</span>
+          </div>
+
+          <div class="skill">
+            <img src="img/icons/git.svg" alt="Git icon"><br>
+            <span>Git</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT COLUMN (1/4): sidebar -->
+      <aside class="skills-aside">
+        <h2>Other Skills</h2>
+        <ul class="other-list">
+          <li>SQL</li>
+          <li>Excel</li>
+          <li>Windows</li>
+          <li>macOS</li>
+          <li>Photoshop</li>
+        </ul>
+      </aside>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Nabil Huseni</p>
+  </footer>
+</body>
+</html>

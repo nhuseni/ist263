@@ -1,0 +1,114 @@
+/* ===== Your existing styles (kept) ===== */
+html, body {
+  background-color: #FFFFFF;  
+  color: #111111;              
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 { color: #F3AD1A; }
+
+a { color: #F3C71A; text-decoration: none; }
+a:visited { color: #F3AD1A; }
+a:hover { text-decoration: underline; }
+
+nav {
+  background-color: #80EBF0;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+nav a {
+  color: #111111;
+  font-weight: bold;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+nav a:hover {
+  background-color: #F3AD1A;
+  color: #FFFFFF;
+}
+nav .separator { color: #111111; opacity: 0.5; }
+
+/* ===== Lab 09 additions ===== */
+
+/* (16a) Page padding so content isn't glued to the window edges */
+.page{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* (1–3) Centered main heading + intro text */
+.skills-title{
+  text-align: center;     /* lecture-approved centering */
+  margin: 8px 0 12px;
+}
+.skills-intro{
+  max-width: 65ch;        /* readable line length */
+  margin: 0 auto 24px;    /* centers the block + space before icons (16c) */
+  text-align: center;
+}
+
+/* (11 & 13) OUTER FLEXBOX: two columns */
+.skills-layout{
+  display: flex;
+  gap: 24px;              /* (16a) space between columns */
+  align-items: flex-start;
+}
+
+/* (14) 3/4 vs 1/4 column split */
+.skills-main  { flex: 3 1 0; }
+.skills-aside { flex: 1 1 0; }
+
+/* (6–8 & 15) INNER FLEXBOX: five icons across */
+.skills-row{
+  display: flex;                 
+  justify-content: space-between; /* spreads icons nicely (15) */
+  gap: 16px;
+  flex-wrap: wrap;                /* prevents overflow on smaller screens */
+  margin-top: 12px;               /* (16c) space above icon row */
+}
+.skill{
+  flex: 1 1 160px;                /* ~5 columns; wrap as needed */
+  text-align: center;
+}
+.skill img{
+  width: 48px;                    /* (5b) size icons via CSS, not Photoshop */
+  height: auto;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+.skill span{ font-weight: 600; }
+
+/* (9–10) Sidebar visual treatment */
+.skills-aside{
+  background: #1f4b6e;           /* complements your palette */
+  color: #ffffff;                 /* 10b: readable on dark bg */
+  padding: 16px;                  /* 16b: inner padding */
+  border-radius: 12px;            /* 10c: curved corners */
+  min-width: 240px;
+}
+.skills-aside h2{
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+}
+.other-list{
+  margin: 0;
+  padding-left: 18px;
+}
+
+/* Optional footer polish */
+.site-footer{
+  padding: 24px;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Responsive: stack columns on narrow screens */
+@media (max-width: 820px){
+  .skills-layout{ flex-direction: column; }
+  .skills-intro{ max-width: 100%; }
+}
