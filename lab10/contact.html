@@ -9,20 +9,19 @@
 <body>
   <div class="page">
 
-    <!-- NAVIGATION (same HTML as other pages; pipes in spans) -->
+    <!-- Navigation (same HTML across pages; pipes in spans) -->
     <nav class="site-nav" aria-label="Primary">
       <a href="index.html">Bio</a><span class="pipe">|</span>
       <a href="skills.html">Skills</a><span class="pipe">|</span>
       <a href="contact.html" aria-current="page">Contact</a>
     </nav>
 
-    <!-- HEADER -->
     <header class="page-header">
       <h1>Contact</h1>
     </header>
 
     <main>
-      <!-- ================= ROW 1: address | links ================= -->
+      <!-- Row 1: address | links -->
       <section class="row row-1">
         <div class="col address">
           <h2>Address</h2>
@@ -47,18 +46,17 @@
         </div>
       </section>
 
-      <!-- ================= ROW 2: form | map (FLEXBOX WITH WRAP) ================= -->
-      <!-- NOTE: form and iframe are direct children (no extra wrapper around iframe) -->
+      <!-- Row 2: form | map (flexbox with wrap) -->
+      <!-- Form and iframe are direct children of the flex container -->
       <section class="contact-grid">
-        <!-- CONTACT FORM -->
         <form class="contact-form" action="#" method="post">
           <h2>Send a Message</h2>
 
           <label for="name">Name</label>
-          <input id="name" name="name" type="text" required>
+          <input id="name" name="name" type="text" autocomplete="name" required>
 
           <label for="email">Email</label>
-          <input id="email" name="email" type="email" required>
+          <input id="email" name="email" type="email" autocomplete="email" required>
 
           <label for="topic">Topic</label>
           <select id="topic" name="topic">
@@ -73,7 +71,6 @@
           <button type="submit">Send</button>
         </form>
 
-        <!-- MAP (direct child; resizes with flexbox) -->
         <iframe
           class="contact-map"
           title="Syracuse University Map"
@@ -84,7 +81,6 @@
       </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="site-footer">
       <hr>
       <p class="copyright">
@@ -93,7 +89,6 @@
       <p class="tagline">
         “A fit, healthy body – that is the best fashion statement.” – Jess C. Scott
       </p>
-      <div class="clear"></div>
     </footer>
 
   </div>
