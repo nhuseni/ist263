@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab 11 – Preview</title>
+
+  <!-- 8) animate.css -> animate2.css -->
+  <link rel="stylesheet" href="animate2.css" />
+
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; text-align: center; padding: 24px; }
+    h1 { margin-bottom: 12px; }
+    .container { display:flex; justify-content:center; align-items:center; gap:20px; margin-top:16px; }
+    .container img { width:180px; max-width:28vw; cursor:pointer; user-select:none; }
+
+    /* 13) base flex order so JS can change it */
+    #first  { order: 2; }
+    #second { order: 3; }
+    #third  { order: 4; }
+
+    #msg { margin-top:18px; font-weight:600; min-height:1.8rem; }
+    #msg.win  { color: #0a7f33; }
+    #msg.lose { color: #a1001a; }
+  </style>
+
+  <script>
+    // 10) replace alerts with in-page messages
+    function WinnerMessage() {
+      const m = document.getElementById("msg");
+      m.className = "win";
+      m.innerHTML = "✅ You found the pea — You Won!";
+    }
+    function TryAgain() {
+      const m = document.getElementById("msg");
+      m.className = "lose";
+      m.innerHTML = "❌ Wrong shell — Try Again.";
+    }
+
+    // 14) shuffle the winning shell's position by changing its flex order
+    function ShuffleShells() {
+      const newOrder = Math.floor((Math.random() * 3) + 2); // 2, 3, or 4
+      document.getElementById("first").style.order = newOrder;
+    }
+  </script>
+</head>
+
+<!-- 15) run shuffle on load -->
+<body onload="ShuffleShells();">
+  <h1>Choose a Walnut</h1>
+
+  <!-- 12) flex container; ids for each shell -->
+  <div class="container">
+    <img id="first"  src="https://laferger.github.io/ist263/images/walnut.png" alt="first walnut"  onclick="WinnerMessage();" />
+    <img id="second" src="https://laferger.github.io/ist263/images/walnut.png" alt="second walnut" onclick="TryAgain();" />
+    <img id="third"  src="https://laferger.github.io/ist263/images/walnut.png" alt="third walnut"  onclick="TryAgain();" />
+  </div>
+
+  <!-- 9) message area -->
+  <div id="msg" aria-live="polite"></div>
+</body>
+</html>
