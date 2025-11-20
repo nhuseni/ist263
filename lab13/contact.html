@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Contact – IST 263 Lab 13</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Skip to Content -->
+  <a class="skip-link" href="#maincontent">Skip to Content</a>
+
+  <div class="page">
+
+    <!-- Navigation (same HTML across pages; pipes in spans) -->
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Bio</a><span class="pipe">|</span>
+      <a href="skills.html">Skills</a><span class="pipe">|</span>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+
+    <header class="page-header">
+      <h1>Contact</h1>
+    </header>
+
+    <main id="maincontent">
+
+      <!-- Row 1: address | links -->
+      <section class="row row-1">
+        <div class="col address">
+          <h2>Address</h2>
+          <address>
+            900 South Crouse Ave<br>
+            Syracuse, NY 13244<br>
+            United States
+          </address>
+        </div>
+
+        <div class="col links">
+          <h2>Links</h2>
+          <ul class="contact-links">
+            <li>Email: <a href="mailto:nhuseni@syr.edu">nhuseni@syr.edu</a></li>
+            <li>
+              <a href="https://www.linkedin.com/in/nabil-huseni" target="_blank" rel="noopener">
+                <img src="../images/linkedin.png" alt="LinkedIn logo" width="28" height="28">
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Row 2: form | map (flexbox with wrap) -->
+      <section class="contact-grid">
+
+        <form class="contact-form" action="#" method="post">
+          <h2>Send a Message</h2>
+
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option>General</option>
+            <option>Project</option>
+            <option>Speaking</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <button type="submit">Send</button>
+        </form>
+
+        <iframe
+          class="contact-map"
+          title="Syracuse University Map"
+          src="https://www.google.com/maps?q=Syracuse+University&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <hr>
+      <p class="copyright">
+        &copy; <time datetime="2025">2025</time> Nabil Huseni
+      </p>
+      <p class="tagline">
+        “A fit, healthy body – that is the best fashion statement.” – Jess C. Scott
+      </p>
+    </footer>
+
+  </div>
+</body>
+</html>
