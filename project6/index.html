@@ -1,127 +1,105 @@
-/* GLOBAL */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #111;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Staying Healthy</title>
+    <meta name="description" content="A personal site about fitness, mental wellness, and healthy habits.">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-h2 {
-    color: #F3AD1A;
-}
+<body>
 
-a {
-    text-decoration: none;
-    color: #111;
-}
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="logo">Staying Healthy</div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fitness-tips.html">Fitness Tips</a></li>
+                <li><a href="mindset.html">Mental Wellness</a></li>
+                <li><a href="journey.html">My Journey</a></li>
+            </ul>
+        </nav>
+    </header>
 
-/* HEADER */
-.site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #F3AD1A;
-    padding: 20px;
-}
+    <main>
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
+        <!-- HERO IMAGE -->
+        <section class="hero">
+            <img src="images/image1.png" alt="Active lifestyle hero image showing movement and energy.">
+        </section>
 
-.nav-list {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
+        <!-- TWO COLUMN LAYOUT -->
+        <section class="main-grid">
 
-/* HERO IMAGE */
-.hero img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
+            <!-- LEFT SIDE -->
+            <div class="left-column">
 
-/* MAIN GRID */
-.main-grid {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-}
+                <!-- MY JOURNEY -->
+                <article class="journey-box">
+                    <h2>My Journey to a More Active Life</h2>
+                    <p>How dedicating time to fitness transformed my physical and mental health and how you can make it enjoyable too.</p>
+                    <a class="button" href="journey.html">Read My Story</a>
+                </article>
 
-.left-column {
-    flex: 3;
-}
+                <!-- HEALTH ENRICHES YOUR LIFE -->
+                <article class="health-box">
+                    <h2>Health That Enriches Your Life</h2>
+                    <p>This blog focuses on simple, meaningful ways to stay active that improve your daily life. What worked for me might inspire your own path because healthy living should feel good, not overwhelming.</p>
+                </article>
 
-/* SIDEBAR */
-.sidebar {
-    flex: 1;
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-}
+                <!-- RECENT INSIGHTS -->
+                <section class="recent-section">
+                    <h2>Recent Insights & Practical Tips</h2>
 
-.profile-img {
-    width: 100%;
-    border-radius: 8px;
-}
+                    <div class="card-grid">
 
-/* INFO BOXES */
-.journey-box,
-.health-box {
-    background: #fafafa;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-}
+                        <article class="card">
+                            <img src="images/image-placeholder.png" alt="">
+                            <h3>Finding Activities You Love</h3>
+                            <p>Discover workouts that feel fun instead of stressful.</p>
+                        </article>
 
-.button {
-    display: inline-block;
-    background: #111;
-    color: white;
-    padding: 10px 14px;
-    border-radius: 5px;
-}
+                        <article class="card">
+                            <img src="images/image-placeholder.png" alt="">
+                            <h3>Mental Clarity Through Movement</h3>
+                            <p>How physical activity boosts mental health.</p>
+                        </article>
 
-/* RECENT CARDS */
-.card-grid {
-    display: flex;
-    gap: 20px;
-}
+                        <article class="card">
+                            <img src="images/image-placeholder.png" alt="">
+                            <h3>Small Changes, Big Impact</h3>
+                            <p>Build sustainable habits without burnout.</p>
+                        </article>
 
-.card {
-    flex: 1;
-    background: #f7f7f7;
-    padding: 15px;
-    border-radius: 8px;
-}
+                    </div>
+                </section>
+            </div>
 
-.card img {
-    width: 100%;
-    border-radius: 6px;
-}
+            <!-- RIGHT SIDEBAR -->
+            <aside class="sidebar">
+                <div class="welcome-box">
+                    <h2>Welcome!</h2>
+                    <img src="images/profile.png" alt="Profile photo" class="profile-img">
+                    <p>Hi, I’m Nabil. I started focusing on fitness and mental wellness recently, and it changed my life. Here I share what helped me grow physically, mentally, and emotionally.</p>
 
-/* FOOTER */
-footer {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
+                    <h3>Featured Topics</h3>
+                    <ul>
+                        <li>Making fitness fun and sustainable</li>
+                        <li>Mindset strategies for everyday activity</li>
+                        <li>Simple wellness tips</li>
+                        <li>My transformation story</li>
+                    </ul>
+                </div>
+            </aside>
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    .main-grid {
-        flex-direction: column;
-    }
+        </section>
+    </main>
 
-    .card-grid {
-        flex-direction: column;
-    }
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Staying Healthy</p>
+    </footer>
 
-    .nav-list {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
+</body>
+</html>
