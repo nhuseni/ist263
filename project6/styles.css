@@ -1,109 +1,95 @@
-/* ========== GLOBAL ========== */
+/* ========= GLOBAL ========= */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    color: #111;
-    background: #fff;
+    line-height: 1.6;
+    background: #ffffff;
+    color: #111111;
 }
 
 h2 {
     color: #F3AD1A;
 }
 
-a {
-    text-decoration: none;
-    color: #111;
-}
-
-/* ========== HEADER ========== */
-.site-header {
-    display: flex;
-    justify-content: space-between;
+/* ========= HEADER ========= */
+header {
+    background-color: #F3AD1A;
+    color: #111111;
     padding: 20px;
-    background: #F3AD1A;
-    color: #111;
+    text-align: center;
 }
 
+/* ========= NAVIGATION (FLEXBOX REQUIRED FOR PROJECT 6) ========= */
 .nav-list {
     list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
+    padding: 0;
+    margin-top: 15px;
+
+    display: flex;  
+    justify-content: center;
+    gap: 24px;
 }
 
-/* ========== HERO SECTION ========== */
-.hero img {
-    width: 100%;
-    height: auto;
+.nav-list a {
+    text-decoration: none;
+    color: #111111;
+    font-weight: bold;
 }
 
-/* ========== MAIN GRID (LEFT COLUMN + SIDEBAR) ========== */
-.main-grid {
-    display: flex;
-    gap: 20px;
+.nav-list a:hover {
+    text-decoration: underline;
+}
+
+/* ========= MAIN CONTENT ========= */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-/* LEFT COLUMN */
-.left-column {
-    flex: 3;
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
-/* RIGHT COLUMN (SIDEBAR) */
-.sidebar {
-    flex: 1;
+/* ========= FLEX SECTION (REQUIRED FOR PROJECT 6) ========= */
+.flex-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.flex-section article {
+    flex: 1 1 calc(33% - 20px);
     background: #f7f7f7;
     padding: 15px;
     border-radius: 8px;
 }
 
-.profile-img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 15px;
-    background: #111;
+/* ========= FOOTER ========= */
+footer {
+    background-color: #111111;
     color: white;
-    border-radius: 5px;
-    margin-top: 10px;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
 }
 
-/* ========== CARDS (3-COLUMN) ========== */
-.card-grid {
-    display: flex;
-    gap: 20px;
-    margin-top: 10px;
-}
-
-.card {
-    flex: 1;
-    background: #f7f7f7;
-    padding: 10px;
-    border-radius: 8px;
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-}
-
-/* ========== RESPONSIVE DESIGN ========== */
-@media (max-width: 900px) {
-
-    .main-grid {
-        flex-direction: column;
-    }
-
-    .card-grid {
-        flex-direction: column;
-    }
+/* ========= RESPONSIVE DESIGN (MEDIA QUERY REQUIRED FOR PROJECT 6) ========= */
+@media (max-width: 700px) {
 
     .nav-list {
         flex-direction: column;
         gap: 10px;
+    }
+
+    .flex-section {
+        flex-direction: column;
+    }
+
+    .flex-section article {
+        flex: 1 1 100%;
     }
 }

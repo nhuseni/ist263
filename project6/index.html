@@ -6,105 +6,74 @@
     <meta name="description" content="A personal site about fitness, mental wellness, and building healthier habits.">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <header>
+        <h1>Staying Healthy</h1>
+        <p>Fitness and mental wellness that fits naturally into your life and helps you feel more balanced every day.</p>
 
-    <!-- ========== HEADER ========== -->
-    <header class="site-header">
-        <div class="logo">Staying Healthy</div>
-
-        <nav aria-label="Main Navigation">
+        <nav aria-label="Main navigation">
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="journey.html">My Journey</a></li>
                 <li><a href="fitness-tips.html">Fitness Tips</a></li>
-                <li><a href="mindset.html">Mental Wellness</a></li>
-                <li><a href="about.html">About Me</a></li>
+                <li><a href="mindset.html">Mindset & Mental Health</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-
-        <!-- ========== HERO IMAGE ========== -->
-        <section class="hero">
-            <img src="images/image1.png" alt="Active lifestyle hero image">
+        <section aria-labelledby="intro-heading">
+            <h2 id="intro-heading">Welcome</h2>
+            <p>
+                This site focuses on fitness and staying active both physically and mentally. 
+                I share my personal journey of putting more time and energy into my health, along with simple and realistic recommendations for anyone who wants to feel better and live healthier.
+            </p>
+            <p>
+                My goal is to show that healthy living can be enjoyable, meaningful, and something that adds value to your day instead of feeling like another routine you’re forced to follow.
+            </p>
         </section>
 
-        <!-- ========== MAIN CONTENT GRID ========== -->
-        <section class="main-grid">
+        <section aria-labelledby="image1-heading">
+            <h2 id="image1-heading">Finding Balance</h2>
+            <figure>
+                <img src="images/image1.png" alt="Person meditating surrounded by icons for wellness, fitness, and balance.">
+                <figcaption>
+                    Wellness is about movement, rest, balance, and taking care of your mind.
+                </figcaption>
+            </figure>
+        </section>
 
-            <!-- LEFT COLUMN (MAIN CONTENT) -->
-            <div class="left-column">
+        <section aria-labelledby="site-sections-heading" class="flex-section">
+            <h2 id="site-sections-heading">What You’ll Find Here</h2>
 
-                <!-- Journey Section -->
-                <article class="journey-box">
-                    <h2>My Journey to a More Active Life</h2>
-                    <p>How dedicating time to fitness transformed my physical and mental health — and how you can make it enjoyable too.</p>
-                    <a class="button" href="journey.html">Read My Story</a>
-                </article>
+            <article>
+                <h3><a href="journey.html">My Journey</a></h3>
+                <p>How I started prioritizing fitness and wellness in college.</p>
+            </article>
 
-                <!-- Health Enrichment Section -->
-                <article class="health-box">
-                    <h2>Health That Enriches Your Life</h2>
-                    <p>
-                        Forget rigid routines and unsustainable programs. This blog is about discovering ways to stay active 
-                        that naturally enhance your daily life — physically and mentally. I share what worked for me and 
-                        practical recommendations so you can adapt to your own journey.
-                    </p>
-                </article>
+            <article>
+                <h3><a href="fitness-tips.html">Fitness Tips</a></h3>
+                <p>Simple strategies to make movement part of everyday life.</p>
+            </article>
 
-                <!-- Recent Insights -->
-                <section class="recent-section">
-                    <h2>Recent Insights & Practical Tips</h2>
+            <article>
+                <h3><a href="mindset.html">Mindset & Mental Health</a></h3>
+                <p>How to stay motivated and care for your mind.</p>
+            </article>
+        </section>
 
-                    <div class="card-grid">
-
-                        <article class="card">
-                            <img src="images/image-placeholder.png" alt="">
-                            <h3>Finding Activities You Love</h3>
-                            <p>How to discover workouts that feel fun.</p>
-                        </article>
-
-                        <article class="card">
-                            <img src="images/image-placeholder.png" alt="">
-                            <h3>Mental Clarity Through Movement</h3>
-                            <p>How physical activity can reset your mind.</p>
-                        </article>
-
-                        <article class="card">
-                            <img src="images/image-placeholder.png" alt="">
-                            <h3>Small Changes, Big Impact</h3>
-                            <p>Build sustainable habits without burnout.</p>
-                        </article>
-
-                    </div>
-                </section>
-            </div>
-
-            <!-- RIGHT SIDEBAR -->
-            <aside class="sidebar">
-                <div class="welcome-box">
-                    <h2>Welcome!</h2>
-                    <img class="profile-img" src="images/profile.png" alt="Profile photo">
-
-                    <p>Hi! I’m Nabil. I recently transformed my life by prioritizing fitness and mental wellness.</p>
-
-                    <h3>Featured Topics</h3>
-                    <ul>
-                        <li>Making fitness fun & sustainable</li>
-                        <li>Mindset shifts for everyday activity</li>
-                        <li>Practical wellness strategies</li>
-                        <li>My personal transformation story</li>
-                    </ul>
-                </div>
-            </aside>
-
+        <section aria-labelledby="resources-heading">
+            <h2 id="resources-heading">Helpful Fitness Resources</h2>
+            <ul>
+                <li><a href="https://www.verywellfit.com/">Verywell Fit</a></li>
+                <li><a href="https://www.strongerbyscience.com/">Stronger by Science</a></li>
+                <li><a href="https://www.myfitnesspal.com/">MyFitnessPal</a></li>
+            </ul>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Staying Healthy</p>
+        <p>&copy; 2025 Staying Healthy.</p>
     </footer>
-
 </body>
 </html>
