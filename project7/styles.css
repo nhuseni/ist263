@@ -25,7 +25,6 @@ header {
     list-style: none;
     padding: 0;
     margin-top: 15px;
-
     display: flex;  
     justify-content: center;
     gap: 24px;
@@ -54,6 +53,15 @@ figure img {
     border-radius: 8px;
 }
 
+/* ========= HERO IMAGE ========= */
+.hero img {
+    max-width: 100%;
+    height: auto;
+    max-height: 350px;
+    display: block;
+    margin: 0 auto;
+}
+
 /* ========= FLEX SECTION (REQUIRED FOR PROJECT 6) ========= */
 .flex-section {
     display: flex;
@@ -79,7 +87,6 @@ footer {
 
 /* ========= RESPONSIVE DESIGN (MEDIA QUERY REQUIRED FOR PROJECT 6) ========= */
 @media (max-width: 700px) {
-
     .nav-list {
         flex-direction: column;
         gap: 10px;
@@ -93,6 +100,7 @@ footer {
         flex: 1 1 100%;
     }
 }
+
 /* ========= ACCESSIBILITY ========= */
 .skip-link {
     position: absolute;
